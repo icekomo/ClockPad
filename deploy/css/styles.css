@@ -335,9 +335,32 @@ ul li {
   list-style: none;
 }
 
+@media (min-width: 768px) {
+  .hide-for-md {
+    display: none !important;
+  }
+}
+
+.show-for-large {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .show-for-large {
+    display: block;
+  }
+}
+
+.show-menu {
+  display: block;
+}
+
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Montserrat", serif;
+}
+
 /* =============
     Buttons
 ============= */
@@ -362,6 +385,47 @@ textarea {
 /* =============
     Navigation
 ============= */
+a:link, a:visited {
+  text-decoration: none;
+  color: var(--black);
+  transform: 0.25s;
+}
+a:link:hover, a:link:active, a:visited:hover, a:visited:active {
+  color: green;
+}
+
+#main-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  height: 100%;
+}
+@media (min-width: 1024px) {
+  #main-menu ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+#main-menu ul li {
+  margin-bottom: 2.25rem;
+}
+@media (min-width: 1024px) {
+  #main-menu ul li {
+    margin-bottom: 0;
+    margin-right: 2.25rem;
+  }
+}
+#main-menu ul li a {
+  text-align: right;
+}
+@media (min-width: 1024px) {
+  #main-menu ul li a {
+    text-align: left;
+  }
+}
+
 /* =============
     Header
 ============= */
@@ -377,8 +441,37 @@ header {
 }
 header .grid-container-page {
   grid-area: header;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: "logo burger" "nav nav";
+}
+@media (min-width: 768px) {
+  header .grid-container-page {
+    grid-template-areas: "logo nav";
+  }
+}
+header .grid-container-page #logo-container {
+  grid-area: logo;
+}
+header .grid-container-page #logo-container img {
+  width: 75px;
+}
+header .grid-container-page #burger-container {
+  grid-area: burger;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .grid-container-page #main-menu {
+  grid-area: nav;
 }
 
 /* =============
     Footer
 ============= */
+#hero {
+  background-image: url("../img/hero/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}

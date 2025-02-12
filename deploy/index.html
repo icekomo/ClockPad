@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/2bcb660cea.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>ClockPad</title>
 </head>
 
 <body>
-     <header>
-         <div class="grid-container-page">
-             <nav>
-                 <ul>
-                     <li><a href="index.html"><img src="img/header/clockpad_applogo.png" alt="ClockPad logo"></a></li>
-                     <li><a href="#">Ingredients</a></li>
-                     <li><a href="#">Meals</a></li>
-                     <li><a href="#">Menus</a></li>
-                 </ul>
+    <header>
+        <div class="grid-container-page">
+            <section id="logo-container">
+                <a href="index.html"><img src="img/header/clockpad_applogo.png" alt="ClockPad logo"></a>
+             </section>
+         
+             <section id="burger-container" class="hide-for-md">
+                 <button id="burger-btn">
+                     <i class="fa-solid fa-bars"></i>
+                 </button>
+             </section>
+             
+             <nav id="main-menu" class="show-for-large">
+                <ul>
+                    <li></li>
+                    <li><a href="#">Ingredients</a></li>
+                    <li><a href="#">Meals</a></li>
+                    <li><a href="#">Menus</a></li>
+                </ul>
              </nav>
-         </div>
-     </header>
+        </div>
+    </header>
+    <section id="hero"></section>
     <script src="js/scripts-min.js"></script>
     
 </body>

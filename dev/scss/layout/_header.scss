@@ -12,5 +12,33 @@ header{
 
     .grid-container-page{
         grid-area: header;
+
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "logo burger"
+        "nav nav";
+
+        @include md{
+            grid-template-areas: "logo nav";
+        }
+
+        #logo-container{
+            grid-area: logo;
+
+            img{
+                width: 75px;
+            }
+        }
+
+        #burger-container{
+            grid-area: burger;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        #main-menu{
+            grid-area: nav;
+        }
     }
 }
