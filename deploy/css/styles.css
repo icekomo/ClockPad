@@ -364,6 +364,11 @@ body {
 /* =============
     Buttons
 ============= */
+button {
+  background-color: transparent;
+  border: none;
+}
+
 /* =============
     Forms
 ============= */
