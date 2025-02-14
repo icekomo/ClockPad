@@ -1,0 +1,50 @@
+/* =============
+    Cards Container
+============= */
+
+@use "../helpers";
+
+#cards-container{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". cards .";
+
+    @include helpers.xl {
+        grid-template-columns:  auto 1200px auto;
+    }
+
+    
+    div{
+        grid-area: cards;
+
+        ul{
+            @include helpers.md{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas: "c1 c1 c2 c2"
+                ". c3 c3 .";
+            }
+
+            @include helpers.lg{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: "c1 c2 c3";
+            }
+
+            li{
+                background: var(--white);
+            }
+
+            #ingredients{
+                grid-area: c1;
+            }
+
+            #meal-builder{
+                grid-area: c2;
+            }
+
+            #menu-builder{
+                grid-area: c3;
+            }
+        }
+    }
+}

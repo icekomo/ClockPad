@@ -2,6 +2,8 @@
     Navigation
 ============= */
 
+@use "../helpers";
+
 a:link, a:visited{
     text-decoration: none;
     color: var(--black);
@@ -20,7 +22,7 @@ a:link, a:visited{
         align-content: flex-end;
         height: 100%;
 
-        @include lg{
+        @include helpers.lg{
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
@@ -28,14 +30,14 @@ a:link, a:visited{
 
         li{
             margin-bottom: rem-calc(36);
-            @include lg{
+            @include helpers.lg{
                 margin-bottom: 0;
                 margin-right: rem-calc(36);
             }
 
             a{
                 text-align: right;
-                @include lg{
+                @include helpers.lg{
                     text-align: left;
                 }
             }

@@ -2,6 +2,12 @@
     Base
 ============= */
 
+@use "../helpers";
+
+body{
+    background-color: var(--gray);
+}
+
 ul{
     padding: 0;
     margin: 0;
@@ -13,14 +19,14 @@ ul{
 
 .hide-for-md{
 
-    @include md{
+    @include helpers.md{
         display: none !important
     }
 }
 
 .show-for-large{
     display: none;
-    @include lg{
+    @include helpers.lg{
         display: block;
     }
 }

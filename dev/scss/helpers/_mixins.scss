@@ -3,6 +3,7 @@
     Mixins
 ============= */
 @use "sass:math";
+@use "variables";
 /* ---------------- Font Sizing ---------------- */
 // ----
 // rem mixins
@@ -106,7 +107,7 @@ html {
 /* ---------------- Media Queries ---------------- */
 // Small devices
 @mixin sm {
-    @media (min-width: #{$screen-sm-min}) {
+    @media (min-width: #{variables.$screen-sm-min}) {
         @content;
     }
 }
@@ -118,7 +119,7 @@ html {
 
 // Medium devices
 @mixin md {
-    @media (min-width: #{$screen-md-min}) {
+    @media (min-width: #{variables.$screen-md-min}) {
         @content;
     }
 }
@@ -130,7 +131,7 @@ html {
 
 // Large devices
 @mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
+    @media (min-width: #{variables.$screen-lg-min}) {
         @content;
     }
 }
@@ -142,7 +143,7 @@ html {
 
 // Extra large devices
 @mixin xl {
-    @media (min-width: #{$screen-xl-min}) {
+    @media (min-width: #{variables.$screen-xl-min}) {
         @content;
     }
 }
@@ -153,7 +154,7 @@ html {
 
 // Super Extra large devices
 @mixin xxl {
-    @media (min-width: #{$screen-xxl-min}) {
+    @media (min-width: #{variables.$screen-xxl-min}) {
         @content;
     }
 }

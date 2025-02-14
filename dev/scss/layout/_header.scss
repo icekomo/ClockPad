@@ -1,12 +1,14 @@
 /* =============
     Header
 ============= */
+@use "../helpers";
+
 header{
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". header .";
 
-    @include xl {
+    @include helpers.xl {
         grid-template-columns:  auto 1200px auto;
     }
 
@@ -18,7 +20,7 @@ header{
         grid-template-areas: "logo burger"
         "nav nav";
 
-        @include md{
+        @include helpers.md{
             grid-template-areas: "logo nav";
         }
 

@@ -1,22 +1,23 @@
 @charset 'utf-8';
 
 // Helpers Styles
-@import "helpers/_mixins";
-@import "helpers/_variables";
+// @forward "helpers/_mixins";
+// @forward "helpers/_variables";
 
 // Base Styles
-@import "base/_normalize";
-@import "base/_base";
-@import "base/_typography";
+@forward "base/normalize";
+@forward "base/base";
+@forward "base/typography";
 
 // Components Styles
-@import "components/_buttons";
-@import "components/_forms";
-@import "components/_navigation";
+@forward "components/buttons";
+@forward "components/forms";
+@forward "components/navigation";
 
 // Layout Styles
-@import "layout/_header";
-@import "layout/_footer";
+@forward "layout/header";
+@forward "layout/footer";
 
 // Sections Styles
-@import "sections/_hero";
+@forward "sections/hero";
+@forward "sections/cards-container";
