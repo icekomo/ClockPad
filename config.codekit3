@@ -108,6 +108,14 @@
       "oAP" : "\/deploy\/index.html",
       "oF" : 0
     },
+    "\/deploy\/ingredients.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/ingredients.html",
+      "oF" : 0
+    },
     "\/deploy\/js\/scripts-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -175,6 +183,14 @@
       "oAP" : "\/deploy\/index.html",
       "oF" : 2
     },
+    "\/dev\/ingredients.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/ingredients.html",
+      "oF" : 2
+    },
     "\/dev\/js\/scripts.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -185,6 +201,22 @@
       "oF" : 2,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/dev\/meals.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/meals.html",
+      "oF" : 2
+    },
+    "\/dev\/menus.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/menus.html",
+      "oF" : 2
     },
     "\/dev\/scss\/base\/_base.scss" : {
       "aP" : 0,
