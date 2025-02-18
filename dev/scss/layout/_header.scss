@@ -37,6 +37,11 @@ header{
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            i{
+                color: var(--blue);
+                margin: 0;
+                padding: 0;
+            }
         }
 
         #main-menu{

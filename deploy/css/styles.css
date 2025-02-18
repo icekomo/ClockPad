@@ -349,11 +349,11 @@ ul li {
   }
 }
 
-.show-for-large {
+.show-for-md {
   display: none;
 }
-@media (min-width: 1024px) {
-  .show-for-large {
+@media (min-width: 768px) {
+  .show-for-md {
     display: block;
   }
 }
@@ -407,10 +407,6 @@ a:link, a:visited {
   color: var(--black);
   transform: 0.25s;
   display: inline-block;
-  height: 100%;
-}
-a:link:hover, a:link:active, a:visited:hover, a:visited:active {
-  background-color: var(--white);
 }
 
 #main-menu ul {
@@ -420,7 +416,7 @@ a:link:hover, a:link:active, a:visited:hover, a:visited:active {
   align-content: flex-end;
   height: 100%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #main-menu ul {
     flex-direction: row;
     justify-content: flex-end;
@@ -428,21 +424,25 @@ a:link:hover, a:link:active, a:visited:hover, a:visited:active {
   }
 }
 #main-menu ul li {
-  margin-bottom: 2.25rem;
+  height: 100px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #main-menu ul li {
     margin-bottom: 0;
     height: 100%;
   }
 }
 #main-menu ul li a {
-  text-align: right;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   box-sizing: border-box;
+  height: 100%;
 }
-@media (min-width: 1024px) {
+#main-menu ul li a:hover, #main-menu ul li a:active {
+  background-color: var(--white);
+}
+@media (min-width: 768px) {
   #main-menu ul li a {
     padding: 24px;
     text-align: left;
@@ -484,6 +484,11 @@ header .grid-container-page #burger-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+header .grid-container-page #burger-container i {
+  color: var(--blue);
+  margin: 0;
+  padding: 0;
 }
 header .grid-container-page #main-menu {
   grid-area: nav;

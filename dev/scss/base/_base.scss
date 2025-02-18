@@ -17,16 +17,15 @@ ul{
 }
 
 
-.hide-for-md{
-
+.hide-for-md{   
     @include helpers.md{
         display: none !important
     }
 }
 
-.show-for-large{
+.show-for-md{
     display: none;
-    @include helpers.lg{
+    @include helpers.md{
         display: block;
     }
 }
