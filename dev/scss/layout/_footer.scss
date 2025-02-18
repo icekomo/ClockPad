@@ -15,19 +15,17 @@ footer{
         color: var(--white);
         display: grid;
         grid-template-areas: "f1"
-        "f2"
-        "f3";
+        "f2";
         gap:16px;
 
         @include helpers.md{
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-areas: "f1 f1 f2 f2"
-            ". f3 f3 .";
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "f1 f2";
         }
 
         @include helpers.lg{
             grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: "f1 f2 f3";
+            grid-template-areas: "f1 f1 f2";
         }
 
         section{
@@ -36,6 +34,11 @@ footer{
             h1{
                 margin-bottom: 16px;
                 font-weight: 500;
+                font-size: helpers.rem-calc(14);
+            }
+
+            p{
+                font-size: helpers.rem-calc(12);
             }
         }
 
@@ -43,12 +46,8 @@ footer{
             grid-area: f1;
         }
 
-        #category{
-            grid-area: f2;
-        }
-
         #social{
-            grid-area: f3;
+            grid-area: f2;
             ul{
                 display: flex;
                 li{

@@ -406,9 +406,11 @@ a:link, a:visited {
   text-decoration: none;
   color: var(--black);
   transform: 0.25s;
+  display: inline-block;
+  height: 100%;
 }
 a:link:hover, a:link:active, a:visited:hover, a:visited:active {
-  color: green;
+  background-color: var(--white);
 }
 
 #main-menu ul {
@@ -431,14 +433,18 @@ a:link:hover, a:link:active, a:visited:hover, a:visited:active {
 @media (min-width: 1024px) {
   #main-menu ul li {
     margin-bottom: 0;
-    margin-left: 2rem;
+    height: 100%;
   }
 }
 #main-menu ul li a {
   text-align: right;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 @media (min-width: 1024px) {
   #main-menu ul li a {
+    padding: 24px;
     text-align: left;
   }
 }
@@ -497,19 +503,19 @@ footer > div {
   grid-area: footer;
   color: var(--white);
   display: grid;
-  grid-template-areas: "f1" "f2" "f3";
+  grid-template-areas: "f1" "f2";
   gap: 16px;
 }
 @media (min-width: 768px) {
   footer > div {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "f1 f1 f2 f2" ". f3 f3 .";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "f1 f2";
   }
 }
 @media (min-width: 1024px) {
   footer > div {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "f1 f2 f3";
+    grid-template-areas: "f1 f1 f2";
   }
 }
 footer > div section {
@@ -518,15 +524,16 @@ footer > div section {
 footer > div section h1 {
   margin-bottom: 16px;
   font-weight: 500;
+  font-size: 0.875rem;
+}
+footer > div section p {
+  font-size: 0.75rem;
 }
 footer > div #about {
   grid-area: f1;
 }
-footer > div #category {
-  grid-area: f2;
-}
 footer > div #social {
-  grid-area: f3;
+  grid-area: f2;
 }
 footer > div #social ul {
   display: flex;
@@ -608,6 +615,8 @@ footer > div #social ul li a:link:hover, footer > div #social ul li a:link:activ
 }
 #cards-container div ul li h1 {
   text-align: center;
+  margin: 1.5rem 0;
+  font-weight: 500;
 }
 #cards-container div ul li .learn-btn:link, #cards-container div ul li .learn-btn:visited {
   background-color: var(--blue);
