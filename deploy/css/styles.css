@@ -320,6 +320,9 @@ template {
   --black: #000000;
   --white: #ffffff;
   --gray: #f8f9fa;
+  --blueLight: #778da9;
+  --blue:#1b263b;
+  --blueDark: #0d1b2a;
 }
 
 /* ---------------- Font Sizing ---------------- */
@@ -364,6 +367,10 @@ ul li {
 ============= */
 body {
   font-family: "Montserrat", serif;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
 }
 
 /* =============
@@ -419,12 +426,12 @@ a:link:hover, a:link:active, a:visited:hover, a:visited:active {
   }
 }
 #main-menu ul li {
-  margin-bottom: rem-calc(36);
+  margin-bottom: 2.25rem;
 }
 @media (min-width: 1024px) {
   #main-menu ul li {
     margin-bottom: 0;
-    margin-right: rem-calc(36);
+    margin-left: 2rem;
   }
 }
 #main-menu ul li a {
@@ -479,6 +486,62 @@ header .grid-container-page #main-menu {
 /* =============
     Footer
 ============= */
+footer {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". footer .";
+  background-color: var(--blueDark);
+  padding: 64px 0;
+}
+footer > div {
+  grid-area: footer;
+  color: var(--white);
+  display: grid;
+  grid-template-areas: "f1" "f2" "f3";
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  footer > div {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "f1 f1 f2 f2" ". f3 f3 .";
+  }
+}
+@media (min-width: 1024px) {
+  footer > div {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "f1 f2 f3";
+  }
+}
+footer > div section {
+  margin-bottom: 64px;
+}
+footer > div section h1 {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+footer > div #about {
+  grid-area: f1;
+}
+footer > div #category {
+  grid-area: f2;
+}
+footer > div #social {
+  grid-area: f3;
+}
+footer > div #social ul {
+  display: flex;
+}
+footer > div #social ul li {
+  margin-right: 16px;
+}
+footer > div #social ul li a:link, footer > div #social ul li a:visited {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+footer > div #social ul li a:link:hover, footer > div #social ul li a:link:active, footer > div #social ul li a:visited:hover, footer > div #social ul li a:visited:active {
+  color: var(--blue);
+}
+
 /* =============
     Hero
 ============= */
@@ -496,6 +559,7 @@ header .grid-container-page #main-menu {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". cards .";
+  margin: 64px 0;
 }
 @media (min-width: 1200px) {
   #cards-container {
@@ -508,6 +572,7 @@ header .grid-container-page #main-menu {
 @media (min-width: 768px) {
   #cards-container div ul {
     display: grid;
+    gap: 16px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "c1 c1 c2 c2" ". c3 c3 .";
   }
@@ -520,6 +585,41 @@ header .grid-container-page #main-menu {
 }
 #cards-container div ul li {
   background: var(--white);
+  padding: 24px;
+  margin-bottom: 16PX;
+  text-align: center;
+  filter: drop-shadow(0px 2px 1px #a3a3a3);
+}
+@media (min-width: 768px) {
+  #cards-container div ul li {
+    margin-bottom: 0;
+  }
+}
+#cards-container div ul li div {
+  background-color: var(--blueLight);
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  margin: 0 auto;
+}
+#cards-container div ul li h1 {
+  text-align: center;
+}
+#cards-container div ul li .learn-btn:link, #cards-container div ul li .learn-btn:visited {
+  background-color: var(--blue);
+  display: inline-block;
+  padding: 16px 24px;
+  color: var(--white);
+  border-radius: 50px;
+  transition: 0.25s;
+  margin-top: 24px;
+}
+#cards-container div ul li .learn-btn:link:hover, #cards-container div ul li .learn-btn:link:active, #cards-container div ul li .learn-btn:visited:hover, #cards-container div ul li .learn-btn:visited:active {
+  background-color: var(--blueDark);
 }
 #cards-container div ul #ingredients {
   grid-area: c1;

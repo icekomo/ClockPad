@@ -127,6 +127,22 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/deploy\/meals.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/meals.html",
+      "oF" : 0
+    },
+    "\/deploy\/menus.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/menus.html",
+      "oF" : 0
+    },
     "\/dev\/content\/home\/cards-container.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -147,7 +163,7 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/dev\/global\/footer.html",
       "oF" : 0
     },

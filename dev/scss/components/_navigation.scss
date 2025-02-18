@@ -29,10 +29,10 @@ a:link, a:visited{
         }
 
         li{
-            margin-bottom: rem-calc(36);
+            margin-bottom: helpers.rem-calc(36);
             @include helpers.lg{
                 margin-bottom: 0;
-                margin-right: rem-calc(36);
+                margin-left: helpers.rem-calc(32);
             }
 
             a{

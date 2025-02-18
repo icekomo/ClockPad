@@ -1,3 +1,68 @@
 /* =============
     Footer
 ============= */
+@use "../helpers";
+
+footer{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". footer .";
+    background-color: var(--blueDark);
+    padding: 64px 0;
+
+    >div{
+        grid-area: footer;
+        color: var(--white);
+        display: grid;
+        grid-template-areas: "f1"
+        "f2"
+        "f3";
+        gap:16px;
+
+        @include helpers.md{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "f1 f1 f2 f2"
+            ". f3 f3 .";
+        }
+
+        @include helpers.lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "f1 f2 f3";
+        }
+
+        section{
+            margin-bottom: 64px;
+
+            h1{
+                margin-bottom: 16px;
+                font-weight: 500;
+            }
+        }
+
+        #about{
+            grid-area: f1;
+        }
+
+        #category{
+            grid-area: f2;
+        }
+
+        #social{
+            grid-area: f3;
+            ul{
+                display: flex;
+                li{
+                    margin-right: 16px;
+                    a:link, a:visited{
+                        color: var(--white);
+                        font-size: helpers.rem-calc(24);
+                        &:hover, &:active{
+                            color: var(--blue);
+                        }
+                    }
+                }
+            }
+           
+        }
+}
+}
