@@ -409,6 +409,10 @@ a:link, a:visited {
   display: inline-block;
 }
 
+.active-item {
+  color: orange !important;
+}
+
 #main-menu ul {
   display: flex;
   flex-direction: column;
